@@ -2,14 +2,14 @@
 This service helps podcasters earn bitcoin. You do not need to run your own node, that is all taken care of.
 
 Features:
-✅ Receive streaming payments
-✅ `/claim` your feed in the bot
-✅ See `/recent` transactions
-✅ Get `/balance` and `/withdraw` funds
+* ✅ Receive streaming payments
+* ✅ `/claim` your feed in the bot
+* ✅ See `/recent` transactions
+* ✅ Get `/balance` and `/withdraw` funds
 
 TODO:
-📝 Statistics
-📝 Many many more features
+* 📝 Statistics
+* 📝 Many many more features
 
 
 # 🔊 For podcast listeners
