@@ -5,6 +5,7 @@ Features:
 * ✅ `/claim` your feed in the bot
 * ✅ See `/recent` transactions
 * ✅ Get `/balance` and `/withdraw` funds
+* ✅ Get a CSV file by `/export`ing your payments
 
 TODO:
 * 📝 Statistics
