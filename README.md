@@ -50,7 +50,4 @@ Open [an Issue](https://github.com/satoshisstream/satoshis.stream/issues) if any
 3. Send a Lightning invoice to the bot, the bot will pay your invoice.
 
 # Satoshis.Stream Lightning Node
-Node URI is:
-`03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4@hmmnwpfjamzphjuoajicjqg4aibjzxic3i7hd732jgaunogaxjkqvaqd.onion:9735`
-Node key is:
-`03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4`
+[Node](https://1ml.com/node/03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4)
