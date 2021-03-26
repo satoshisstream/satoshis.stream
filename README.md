@@ -1,5 +1,6 @@
 **Satoshis Stream! Earn streaming satoshis!**
-This service helps podcasters earn bitcoin. You do not need to run your own node, that is all taken care of.
+
+This service helps podcasters earn bitcoin. You do not need to run your own node, that is all taken care of. Just register the SatoshisStream node and start earning!
 
 Features:
 * ✅ Receive streaming payments
