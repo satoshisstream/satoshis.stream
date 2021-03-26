@@ -23,7 +23,7 @@ Two ways of getting sats from your listeners:
 
 ## ⚡️ Use this service
 1. Find your podcast's RSS URL
-2. Enter your details on [podcasterwallet](https://podcasterwallet.com/). Use node key <p style="word-break: break-all; overflow-wrap: break-word;">03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4</p>
+2. Enter your details on [podcasterwallet](https://podcasterwallet.com/). Use node key 03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4
 3. Install/open [Telegram](https://t.me/satoshisstreambot), start a conversation with [@StreamingSatsBot](https://t.me/satoshisstreambot) and follow instructions (/claim your feed)
 
 _Withdrawal fee is 4%_
