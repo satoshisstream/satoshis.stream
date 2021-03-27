@@ -53,3 +53,15 @@ You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) 
 Node key = 03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4
 
 [Node](https://1ml.com/node/03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4)
+
+# Metadata
+Metadata sent by apps in data record 7629169:
+
+    {
+      'podcast': 'PODCASTNAME', 
+      'episode': 'EPISODENAME', 
+      'action': 'boost', 
+      'time': '00:01:26'
+    }
+
+Suggested addition: `podcastindex_id` and/or `rss_url`.
