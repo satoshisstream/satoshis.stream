@@ -26,7 +26,7 @@ Two ways of getting sats from your listeners. Join the [Support group](https://t
 2. Enter your details on [podcasterwallet](https://podcasterwallet.com/). Then add SatoshisStream as custom node:  03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4
 3. Install/open [Telegram](https://t.me/satoshisstreambot), start a conversation with [@StreamingSatsBot](https://t.me/satoshisstreambot) and follow instructions (/claim your feed)
 
-_Withdrawal fee is 4%_
+_Withdrawal fee is 3% for the service + 1 % to PodcastIndex for a total of 4%_
 
 ## ⚡️ DIY: Do it yourself
 1. Set up a Lightning node which supports keysend. [Umbrel](https://getumbrel.com/) is an easy option to set up your own node
