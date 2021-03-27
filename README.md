@@ -1,4 +1,4 @@
-This service helps podcasters earn bitcoin. You do not need to run your own node, that is all taken care of. Just register the SatoshisStream node and start earning!
+This service helps podcasters earn bitcoin. You do not need to run your own node, that is all taken care of. Just register the SatoshisStream node and start earning! You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) for help!
 
 Features:
 * ✅ Receive streaming payments
@@ -19,7 +19,7 @@ Use an app which supports streaming sats to your favorite podcasters.
 * [Sphinx Chat](https://sphinx.chat/) also supports streaming to podcasts
 
 # 🎙 For podcast creators
-Two ways of getting sats from your listeners:
+Two ways of getting sats from your listeners. Join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) if you need   help!
 
 ## ⚡️ Use this service
 1. Find your podcast's RSS URL. Make sure you control the owner email address in that file.
@@ -37,7 +37,7 @@ _Withdrawal fee is 4%_
 6. Receive sats
 
 # ℹ️ Help for bot users
-Open [an Issue](https://github.com/satoshisstream/satoshis.stream/issues) if anything is unclear!
+You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) for help! Open [an Issue](https://github.com/satoshisstream/satoshis.stream/issues) if anything is unclear!
 
 ## Claiming your feed
 1. Find your RSS url, we will use `https://pod.cast/feed.rss` as an example.
