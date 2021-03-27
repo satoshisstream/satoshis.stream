@@ -5,7 +5,7 @@ Features:
 * ✅ `/claim` your feed in the bot
 * ✅ See `/recent` transactions
 * ✅ Get `/balance` and `/withdraw` funds
-* ✅ Get a CSV file by `/export`ing your payments
+* ✅ Get a complete export of data by `/export`ing your payments. You will get an excel file with all payments, withdrawals and more.  
 * ✅ **Advanced users:** Enable `/authwithdraw` and auto-send earnings >100 sat to your own node. Why not use your own node? To use the nice statistics (upcoming), for easier switching of destinations, if you don't want to publish your own node key!
 
 TODO:
