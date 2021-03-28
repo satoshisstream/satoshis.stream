@@ -22,6 +22,11 @@ Sender pubkey, 33 bytes
 Timestamp in nano seconds since unix epoch (big endian encoded)
 
 
+## Tipping
+### Field 7629168
+[Tip destination](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
+
+
 ## Podcasting (podcasting2.0)
 ### Field 7629169
 Key-value JSON metadata about the sent payment. Holds data about the timestamp when the payment was sent within the episode.
