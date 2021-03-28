@@ -4,13 +4,14 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 
 | Key        	| Subject 	| Length (bytes) 	| Description                	| Additional information 	|
 |------------	|---------	|----------------	|----------------------------	|------------------------	|
-| 5482373484 	| keysend 	| 32             	| Preimage as 32 bytes       	|                        	|
-| 34349334   	| chat     	| variable       	| Chat message               	| Whatsat and more       	|
-| 34349337   	| chat     	| ~71           	| Signature                  	| See below             	|
-| 34349339   	| chat     	| 33            	| Chat message               	| Whatsat and more       	|
-| 34349343   	| chat     	| 8             	| Timestamp                  	| See below             	|
-| 7629168    	| tipping  	| variable       	| Tip note / destination     	| See below              	|
-| 7629169    	| podcast 	| variable       	| JSON encoded metadata     	| See below              	|
+| 34349334      | chat          | variable              | Chat message                  | Whatsat and more              |
+| 34349337      | chat          | ~71                   | Signature                     | See below                     |
+| 34349339      | chat          | 33                    | Chat message                  | Whatsat and more              |
+| 34349343      | chat          | 8                     | Timestamp                     | See below                     |
+| 5482373484    | keysend       | 32                    | Preimage as 32 bytes          |                               |
+| 7629168       | tipping       | variable              | Tip note / destination        | See below                     |
+| 7629169       | podcast       | variable              | JSON encoded metadata         | See below                     |
+
 
 
 # Additional information
