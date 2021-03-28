@@ -15,6 +15,8 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 
 
 # Additional information
+### Chat
+See [Whatsat spec](https://github.com/joostjager/whatsat#protocol)
 ### Field 34349337
 `signature(sender | recipient | timestamp | msg), DER-encoded ECDSA`
 ### Field 34349343
