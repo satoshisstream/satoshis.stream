@@ -1,4 +1,8 @@
-This service helps podcasters earn bitcoin. You do not need to run your own node, that is all taken care of. Just register the SatoshisStream node and start earning! You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) for help!
+This service helps podcasters earn bitcoin. 
+
+You do not need to run your own node, that is all taken care of ("Uncle Jan node")!
+
+Just register the SatoshisStream node and start earning! You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) for help!
 
 Features:
 * ✅ Receive streaming payments
