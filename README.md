@@ -2,7 +2,9 @@
 
 You do not need to run your own node, that is all taken care of ("Uncle Jan node")! Just [register the SatoshisStream node](#%EF%B8%8F-use-this-service) and start earning! 
 
-You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) for help!
+**[Start now!](#%EF%B8%8F-use-this-service)**
+
+_You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) for help!_
 
 Features:
 * ✅ Receive streaming payments
@@ -15,10 +17,6 @@ Features:
 * ✅ **Advanced users:** Enable `/authwithdraw` and auto-send earnings >100 sat to your own node. Why not use your own node? To use the nice statistics (upcoming), for easier switching of destinations, if you don't want to publish your own node key!
 
 ![Image showing withdrawals in a scatter plot](https://raw.githubusercontent.com/satoshisstream/satoshis.stream/main/ext/Export.jpg "Export example")
-
-TODO:
-* 📝 Statistics
-* 📝 Many many more features
 
 
 # 🔊 For podcast listeners
