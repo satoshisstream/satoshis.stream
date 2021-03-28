@@ -35,7 +35,7 @@ Two ways of getting sats from your listeners. Join the [Support group](https://t
 _Withdrawal fee is 3% for the service + 1 % to PodcastIndex for a total of 4%_
 
 ## ⚡️ DIY: Do it yourself
-1. Set up a Lightning node which supports keysend. [Umbrel](https://getumbrel.com/) is an easy option to set up your own node
+1. Set up a Lightning node which supports keysend. [RaspiBlitz](https://github.com/rootzoll/raspiblitz) is an easy FOSS option to set up your own node
 2. Set up channels, make sure you have inbound capacity
 3. Find your node key and your podcast's RSS URL
 4. Manually add a [value block](https://github.com/Podcastindex-org/podcast-namespace/blob/main/value/value.md) **or** enter your details on [podcasterwallet](https://podcasterwallet.com/)
