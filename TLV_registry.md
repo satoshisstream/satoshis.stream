@@ -14,7 +14,7 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 
 
 # Additional information
-## Field 34349337
+### Field 34349337
 `signature(sender | recipient | timestamp | msg), DER-encoded ECDSA`
 ### Field 34349343
 Timestamp in nano seconds since unix epoch (big endian encoded)
