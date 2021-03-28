@@ -1,33 +1,25 @@
 # TLV record registry
 Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](https://github.com/satoshisstream/satoshis.stream/pulls) to add your own fields.
 
-## Keysend (spontaneous payments)
-### Field 5482373484
-Field holds the preimage as 32 bytes
+
+| Key        	| Subject 	| Length (bytes) 	| Description                	| Additional information 	|
+|------------	|---------	|----------------	|----------------------------	|------------------------	|
+| 5482373484 	| keysend 	| 32             	| Preimage as 32 bytes       	|                        	|
+| 34349334   	| chat     	| variable       	| Chat message               	| Whatsat and more       	|
+| 34349337   	| chat     	| ~71           	| Signature                  	| See below             	|
+| 34349339   	| chat     	| 33            	| Chat message               	| Whatsat and more       	|
+| 34349343   	| chat     	| 8             	| Timestamp                  	| See below             	|
+| 7629168    	| tipping  	| variable       	| Tip note / destination     	| See below              	|
+| 7629169    	| podcast 	| variable       	| JSON encoded metadata     	| See below              	|
 
 
-## Messages (whatsat et cetera)
-### Field 34349334
-Chat message, variable length
-
-### Field 34349337
-Signature of the message, around 71 bytes.
-
+# Additional information
+## Field 34349337
 `signature(sender | recipient | timestamp | msg), DER-encoded ECDSA`
-
-### Field 34349339
-Sender pubkey, 33 bytes
-
 ### Field 34349343
 Timestamp in nano seconds since unix epoch (big endian encoded)
-
-
-## Tipping
 ### Field 7629168
 [Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
-
-
-## Podcasting (podcasting2.0)
 ### Field 7629169
 Key-value JSON metadata about the sent payment. Holds data about the timestamp when the payment was sent within the episode.
 
