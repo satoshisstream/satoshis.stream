@@ -24,7 +24,7 @@ Timestamp in nano seconds since unix epoch (big endian encoded)
 
 ## Tipping
 ### Field 7629168
-[Tip destination](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
+[Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
 
 
 ## Podcasting (podcasting2.0)
