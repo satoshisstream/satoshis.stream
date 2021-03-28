@@ -27,12 +27,10 @@ Example: `{'podcast': 'PODCASTNAME', 'episode': 'EPISODENAME', 'action': 'boost'
 
 Keys and values:
 
-`podcast: (str) Title of the podcast (required)`
+* podcast: `(str) Title of the podcast (required)`
+* episode: `(str) Episode of the podcast (required)`
+* action: `(str) "boost" or "stream" (required)`
+* time: `(str) HH:MM:SS timestamp when the boost/stream was sent (required)`
+* podcastindex_id: `(int) ID of podcast in PodcastIndex.org (recommended)`
+* rss_url: `(int) RSS feed URL of podcast (optional)`
 
-`episode: (str) Episode of the podcast (required)`
-
-`action: (str) "boost" or "stream" (required)`
-
-`time: (str) HH:MM:SS timestamp when the boost/stream was sent (required)`
-
-`podcastindex_id: (int) ID of podcast in PodcastIndex.org (recommended)`
