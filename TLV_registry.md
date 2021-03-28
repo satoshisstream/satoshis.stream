@@ -29,8 +29,12 @@ Key-value JSON metadata about the sent payment. Holds data about the timestamp w
 Example: `{'podcast': 'PODCASTNAME', 'episode': 'EPISODENAME', 'action': 'boost', 'time': '00:01:26', 'podcastindex_id': 1337 }`
 
 Keys and values:
-```podcast: (str) Title of the podcast (required)
-episode: (str) Episode of the podcast (required)
-action: (str) "boost" or "stream" (required)
-time: (str) HH:MM:SS timestamp when the boost/stream was sent (required)
-podcastindex_id: (int) ID of podcast in PodcastIndex.org (recommended)```
+`podcast: (str) Title of the podcast (required)`
+
+`episode: (str) Episode of the podcast (required)`
+
+`action: (str) "boost" or "stream" (required)`
+
+`time: (str) HH:MM:SS timestamp when the boost/stream was sent (required)`
+
+`podcastindex_id: (int) ID of podcast in PodcastIndex.org (recommended)`
