@@ -47,7 +47,7 @@ You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) 
 
 ## Claiming your feed
 1. Find your RSS url, we will use `https://pod.cast/feed.rss` as an example.
-2. Type `/claim https://pod.cast/feed.rss`, you will get a **code**. Add this code to a one recent shownotes page. Wait 20 minutes.
+2. Type `/claim https://pod.cast/feed.rss`, you will get a **code**. Add this code to a one recent shownotes page. Wait some minutes.
 3. Type `/claim https://pod.cast/feed.rss` again and your node is claimed
 
 ## Withdrawing funds
