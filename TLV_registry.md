@@ -26,7 +26,7 @@ Timestamp in nano seconds since unix epoch (big endian encoded)
 ### Field 7629169
 Key-value JSON metadata about the sent payment. Holds data about the timestamp when the payment was sent within the episode.
 
-Example: `{'podcast': 'PODCASTNAME', 'episode': 'EPISODENAME', 'action': 'boost', 'time': '00:01:26', 'podcastindex_id': 1337 }`
+Example: `{'podcast': 'PODCASTNAME', 'feedID': 1337, 'episode': 'EPISODENAME', 'action': 'boost', 'ts': 33 }`
 
 **Keys and values:**
 
