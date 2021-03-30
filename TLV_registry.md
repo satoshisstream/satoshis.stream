@@ -28,15 +28,17 @@ Key-value JSON metadata about the sent payment. Holds data about the timestamp w
 
 Example: `{'podcast': 'PODCASTNAME', 'episode': 'EPISODENAME', 'action': 'boost', 'time': '00:01:26', 'podcastindex_id': 1337 }`
 
-Keys and values:
+**Keys and values:**
+
+_Some keys are interchangable: [podcast/feedid], [episode/itemID], [time/ts]._
 
 * podcast: `(str) Title of the podcast (required if feedID is not used)`
-* feedID: `(int) ID of podcast in PodcastIndex.org (required if podcast is not used)`
+* **feedID**: `(int) ID of podcast in PodcastIndex.org (required if podcast is not used)`
 * episode: `(str) Episode of the podcast (required if itemID is not used)`
-* itemID: `(int) ID of episode in PodcastIndex.org (required if episode is not used)`
-* action: `(str) "boost" or "stream" (required)`
+* **itemID**: `(int) ID of episode in PodcastIndex.org (required if episode is not used)`
+* **action**: `(str) "boost" or "stream" (required)`
 * time: `(str) HH:MM:SS timestamp when the boost/stream was sent (required if ts is not used)`
-* ts: `(int) Seconds in the ep the action was done (required if time is not used)`
+* **ts**: `(int) Seconds in the ep the action was done (required if time is not used)`
 * url: `(int) RSS feed URL of podcast (optional)`
 * speed: `(str) Speed (optional)`
 * pubkey: `(str) Sending node pubkey (optional)`
