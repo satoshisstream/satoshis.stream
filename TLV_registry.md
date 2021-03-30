@@ -30,10 +30,16 @@ Example: `{'podcast': 'PODCASTNAME', 'episode': 'EPISODENAME', 'action': 'boost'
 
 Keys and values:
 
-* podcast: `(str) Title of the podcast (required)`
-* episode: `(str) Episode of the podcast (required)`
+* podcast: `(str) Title of the podcast (required if feedID is not used)`
+* feedID: `(int) ID of podcast in PodcastIndex.org (required if podcast is not used)`
+* episode: `(str) Episode of the podcast (required if itemID is not used)`
+* itemID: `(int) ID of episode in PodcastIndex.org (required if episode is not used)`
 * action: `(str) "boost" or "stream" (required)`
-* time: `(str) HH:MM:SS timestamp when the boost/stream was sent (required)`
-* podcastindex_id: `(int) ID of podcast in PodcastIndex.org (recommended)`
-* rss_url: `(int) RSS feed URL of podcast (optional)`
+* time: `(str) HH:MM:SS timestamp when the boost/stream was sent (required if ts is not used)`
+* ts: `(int) Seconds in the ep the action was done (required if time is not used)`
+* url: `(int) RSS feed URL of podcast (optional)`
+* speed: `(str) Speed (optional)`
+* pubkey: `(str) Sending node pubkey (optional)`
+* uuid: `(str) Unique UID (optional)`
+* amount: `(int) Amount of sats (optional)`
 
