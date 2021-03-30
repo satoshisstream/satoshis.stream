@@ -30,17 +30,17 @@ Example: `{'podcast': 'PODCASTNAME', 'feedID': 1337, 'episode': 'EPISODENAME', '
 
 **Keys and values:**
 
-_Some keys are interchangable: [podcast/feedid], [episode/itemID], [time/ts]._
+_Some keys are interchangable: [podcast/feedid/url], [episode/itemID/episode_guid], [time/ts]._
 
-* podcast: `(str) Title of the podcast (required if feedID is not used)`
-* **feedID**: `(int) ID of podcast in PodcastIndex.org (required if podcast is not used)`
-* episode: `(str) Episode of the podcast (required if itemID is not used)`
-* **itemID**: `(int) ID of episode in PodcastIndex.org (required if episode is not used)`
-* **episode_guid**: `(str) The GUID of the episode`
+* podcast: `(str) Title of the podcast (use any of podcast, feedID or URL, feedID preferred)`
+* **feedID**: `(int) ID of podcast in PodcastIndex.org (use any of podcast, feedID or URL, feedID preferred)`
+* url: `(int) RSS feed URL of podcast (use any of podcast, feedID or URL, feedID preferred)`
+* episode: `(str) Episode of the podcast (use any of episode, itemID, episode_guid. itemID preferred)`
+* **itemID**: `(int) ID of episode in PodcastIndex.org (use any of episode, itemID, episode_guid. itemID preferred)`
+* **episode_guid**: `(str) The GUID of the episode (use any of episode, itemID, episode_guid. itemID preferred)`
 * **action**: `(str) "boost" or "stream" (required)`
 * time: `(str) HH:MM:SS timestamp when the boost/stream was sent (required if ts is not used)`
 * **ts**: `(int) Seconds in the ep the action was done (required if time is not used)`
-* url: `(int) RSS feed URL of podcast (optional)`
 * speed: `(str) Speed (optional)`
 * pubkey: `(str) Sending node pubkey (optional)`
 * uuid: `(str) Unique UID (optional)`
