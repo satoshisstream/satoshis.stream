@@ -28,21 +28,23 @@ Key-value JSON metadata about the sent payment. Holds data about the timestamp w
 
 Example: `{'podcast': 'PODCASTNAME', 'feedID': 1337, 'episode': 'EPISODENAME', 'action': 'boost', 'ts': 33 }`
 
-**Keys and values:**
+Identifying the podcast: use any of `podcast`, `feedID` or `url`. **feedID preferred**
+* podcast: `(str) Title of the podcast `
+* **feedID**: `(int) ID of podcast in PodcastIndex.org`
+* url: `(int) RSS feed URL of podcast`
 
-_Some keys are interchangable: [podcast/feedid/url], [episode/itemID/episode_guid], [time/ts]._
-
-* podcast: `(str) Title of the podcast (use any of podcast, feedID or URL, feedID preferred)`
-* **feedID**: `(int) ID of podcast in PodcastIndex.org (use any of podcast, feedID or URL, feedID preferred)`
-* url: `(int) RSS feed URL of podcast (use any of podcast, feedID or URL, feedID preferred)`
+Identifying the spisode: use any of `episode`, `itemID` or `episode_guid`. **itemID preferred**
 * episode: `(str) Episode of the podcast (use any of episode, itemID, episode_guid. itemID preferred)`
 * **itemID**: `(int) ID of episode in PodcastIndex.org (use any of episode, itemID, episode_guid. itemID preferred)`
-* **episode_guid**: `(str) The GUID of the episode (use any of episode, itemID, episode_guid. itemID preferred)`
-* **action**: `(str) "boost" or "stream" (required)`
+* episode_guid: `(str) The GUID of the episode (use any of episode, itemID, episode_guid. itemID preferred)`
+
+Information about time: use any of `time`, `ts`. **ts preferred**
 * time: `(str) HH:MM:SS timestamp when the boost/stream was sent (required if ts is not used)`
 * **ts**: `(int) Seconds in the ep the action was done (required if time is not used)`
+
+Rest of keys (bold = required):
+* **action**: `(str) "boost" or "stream" (required)`
 * speed: `(str) Speed (optional)`
 * pubkey: `(str) Sending node pubkey (optional)`
 * uuid: `(str) Unique UID (optional)`
 * amount: `(int) Amount of sats (optional)`
-
