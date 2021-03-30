@@ -36,6 +36,7 @@ _Some keys are interchangable: [podcast/feedid], [episode/itemID], [time/ts]._
 * **feedID**: `(int) ID of podcast in PodcastIndex.org (required if podcast is not used)`
 * episode: `(str) Episode of the podcast (required if itemID is not used)`
 * **itemID**: `(int) ID of episode in PodcastIndex.org (required if episode is not used)`
+* **episode_guid**: `(str) The GUID of the episode`
 * **action**: `(str) "boost" or "stream" (required)`
 * time: `(str) HH:MM:SS timestamp when the boost/stream was sent (required if ts is not used)`
 * **ts**: `(int) Seconds in the ep the action was done (required if time is not used)`
