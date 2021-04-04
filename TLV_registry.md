@@ -48,3 +48,7 @@ Rest of keys:
 * `pubkey` (str) Sending node pubkey (optional)
 * `uuid` (str) Unique UID (optional)
 * `amount` (int) Amount of sats (optional)
+* `message` (str) Text message to add to (boost) message
+* `sender_key` (str) Node key
+* `sig_fields` (str) pipe separated list of fields that are used for signature (example: feedID|itemID|ts|action|sender_key|message)
+* `signature` (str) DER-encoded ECDSA signature
