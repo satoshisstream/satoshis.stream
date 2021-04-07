@@ -2,7 +2,7 @@
 
 You do not need to run your own node, that is all taken care of ("Uncle Jan node")! Just [register the SatoshisStream node](#%EF%B8%8F-use-this-service) and start earning! 
 
-**[Start now!](#%EF%B8%8F-use-this-service)**
+**[Start now!](#%EF%B8%8F-for-podcast-creators)**
 
 _You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) for help!_
 
