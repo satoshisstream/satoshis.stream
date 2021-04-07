@@ -51,6 +51,8 @@ Information about time: use any of `time`, `ts`. **ts preferred**
 
 Rest of keys:
 * `action` **required**: (str) "boost" or "stream" (required)
+* `app_name`: (str) Name of sending app (optional)
+* `app_version`: (str) Version of sending app (optional)
 * `speed` (str) Speed (optional)
 * `pubkey` (str) Sending node pubkey (optional)
 * `uuid` (str) Unique UID (optional)
