@@ -23,7 +23,7 @@ Features:
 Use an app which supports streaming sats to your favorite podcasters. 
 * Mobile: [Breez](https://breez.technology/) is an excellent non-custodial Lightning wallet
 * Mobile + Desktop: [Sphinx Chat](https://sphinx.chat/) also supports streaming to podcasts
-* Desktop/Browser: [PodStation](https://podstation.app/#/page/Home) Chrome plugin 
+* Desktop/Browser: [podStation](https://podstation.github.io/) browser extension 
 
 # 🎙 For podcast creators
 Two ways of getting sats from your listeners. Join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) if you need   help!
