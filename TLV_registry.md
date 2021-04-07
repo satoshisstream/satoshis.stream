@@ -9,7 +9,8 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 34349339      | chat          | 33                    | Chat message                  | Whatsat and more              |
 | 34349343      | chat          | 8                     | Timestamp                     | See below                     |
 | 5482373484    | keysend       | 32                    | Preimage as 32 bytes          |                               |
-| 7629168       | tipping       | variable              | Tip note / destination        | See below                     |
+| 7629168       | tipping       | variable              | Tip note / destination        | Do not use                    |
+| 7629171       | tipping       | variable              | Tip note / destination        | See below                     |
 | 7629169       | podcast       | variable              | JSON encoded metadata         | See below                     |
 
 
@@ -21,8 +22,14 @@ See [Whatsat spec](https://github.com/joostjager/whatsat#protocol)
 `signature(sender | recipient | timestamp | msg), DER-encoded ECDSA`
 ### Field 34349343
 Timestamp in nano seconds since unix epoch (big endian encoded)
-### Field 7629168
+
+### Field 7629168 [PROBLEMATIC! Use 7629171]
 [Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
+Problem is: "a Sennding node MUST NOT send evenly-typed TLV records in the extension without prior negotiation." according to spec. So use 7629171!
+
+### Field 7629171
+[Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
+
 ### Field 7629169
 Key-value JSON metadata about the sent payment. Holds data about the timestamp when the payment was sent within the episode.
 
