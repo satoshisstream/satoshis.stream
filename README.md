@@ -61,5 +61,6 @@ Node key = 03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4
 
 [Node](https://1ml.com/node/03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4)
 
-# TLV Registry
-* Find the [TLV registry here](/TLV_registry.html).
+# For developers: TLV Registry
+Format of payments:
+* Find the [TLV registry here](https://github.com/satoshisstream/satoshis.stream/blob/main/TLV_registry.md).
