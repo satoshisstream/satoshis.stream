@@ -35,6 +35,8 @@ Key-value JSON metadata about the sent payment. Holds data about the timestamp w
 
 Example: `{'podcast': 'PODCASTNAME', 'feedID': 1337, 'episode': 'EPISODENAME', 'action': 'boost', 'ts': 33 }`
 
+_It is allowed to send a batch of payments, by sending a **list** of above key-value "blocks" . If you do, consider setting value_msat per block._
+
 Identifying the podcast: use any of `podcast`, `feedID` or `url`. **feedID preferred**
 * `podcast` (str) Title of the podcast
 * `feedID` (int) ID of podcast in PodcastIndex.org
@@ -51,6 +53,7 @@ Information about time: use any of `time`, `ts`. **ts preferred**
 
 Rest of keys:
 * `action` **required**: (str) "boost" or "stream" (required)
+* `value_msat`: (int) Number of millisats (optional, useful for batches)
 * `app_name`: (str) Name of sending app (optional)
 * `app_version`: (str) Version of sending app (optional)
 * `speed` (str) Speed (optional)
