@@ -53,14 +53,16 @@ Information about time: use any of `time`, `ts`. **ts preferred**
 
 Rest of keys:
 * `action` **required**: (str) "boost" or "stream" (required)
-* `value_msat`: (int) Number of millisats (optional, useful for batches)
-* `app_name`: (str) Name of sending app (optional)
-* `app_version`: (str) Version of sending app (optional)
-* `speed` (str) Speed (optional)
-* `pubkey` (str) Sending node pubkey (optional)
-* `uuid` (str) Unique UID (optional)
 * `amount` (int) Amount of sats (optional)
+* `app_name`: **recommended** (str) Name of sending app (optional)
+* `app_version`: (str) Version of sending app (optional)
 * `message` (str) Text message to add to (boost) message
+* `name` **recommended** (str) Name for this split in value tag
+* `pubkey` (str) Sending node pubkey (optional)
 * `sender_key` (str) Node key
 * `sig_fields` (str) pipe separated list of fields that are used for signature (example: feedID|itemID|ts|action|sender_key|message)
 * `signature` (str) DER-encoded ECDSA signature
+* `speed` (str) Speed (optional)
+* `uuid` (str) Unique UID (optional)
+* `value_msat`: (int) Number of millisats (optional, useful for batches)
+
