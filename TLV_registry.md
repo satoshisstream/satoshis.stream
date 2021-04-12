@@ -37,32 +37,32 @@ Example: `{'podcast': 'PODCASTNAME', 'feedID': 1337, 'episode': 'EPISODENAME', '
 
 _It is allowed to send a batch of payments, by sending a **list** of above key-value "blocks" . If you do, consider setting value_msat per block._
 
-Identifying the podcast: use any of `podcast`, `feedID` or `url`. **feedID preferred**
+Identifying the podcast **required**: use any of `podcast`, `feedID` or `url`. **feedID preferred**
 * `podcast` (str) Title of the podcast
 * `feedID` (int) ID of podcast in PodcastIndex.org
 * `url` (int) RSS feed URL of podcast
 
-Identifying the spisode: use any of `episode`, `itemID` or `episode_guid`. **itemID preferred**
+Identifying the episode **recommended**: use any of `episode`, `itemID` or `episode_guid`. **itemID preferred**
 * `episode` (str) Episode of the podcas
 * `itemID` (int) ID of episode in PodcastIndex.org
 * `episode_guid` (str) The GUID of the episode
 
-Information about time: use any of `time`, `ts`. **ts preferred**
+Information about time **recommended**: use any of `time`, `ts`. **ts preferred**
 * `time` (str) HH:MM:SS timestamp when the boost/stream was sent WITHIN the episode (playback position)
 * `ts` (int) Timestamp when the boost/stream was sent WITHIN the episode (playback position)
 
 Rest of keys:
-* `action` **required**: (str) "boost" or "stream" (required)
-* `amount` (int) Amount of sats (optional)
-* `app_name`: **recommended** (str) Name of sending app (optional)
-* `app_version`: (str) Version of sending app (optional)
+* `action` **recommended**: (str) "boost" or "stream" 
+* `amount` (int) Amount of sats
+* `app_name`: **recommended** (str) Name of sending app
+* `app_version`: (str) Version of sending app 
 * `message` (str) Text message to add to (boost) message
 * `name` **recommended** (str) Name for this split in value tag
-* `pubkey` (str) Sending node pubkey (optional)
+* `pubkey` (str) Sending node pubkey
 * `sender_key` (str) Node key
 * `sig_fields` (str) pipe separated list of fields that are used for signature (example: feedID|itemID|ts|action|sender_key|message)
 * `signature` (str) DER-encoded ECDSA signature
-* `speed` (str) Speed (optional)
-* `uuid` (str) Unique UID (optional)
-* `value_msat`: (int) Number of millisats (optional, useful for batches)
+* `speed` (str) Speed
+* `uuid` (str) Unique UID
+* `value_msat`: (int) Number of millisats
 
