@@ -20,19 +20,10 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 
 
 # Additional information
-### Chat
-See [Whatsat spec](https://github.com/joostjager/whatsat#protocol)
-### Field 34349337
-`signature(sender | recipient | timestamp | msg), DER-encoded ECDSA`
-### Field 34349343
-Timestamp in nano seconds since unix epoch (big endian encoded)
 
 ### Field 7629168 [PROBLEMATIC! Use 7629171]
 [Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
-Problem is: "a Sennding node MUST NOT send evenly-typed TLV records in the extension without prior negotiation." according to spec. So use 7629171!
-
-### Field 7629171
-[Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
+Problem is: "a Sending node MUST NOT send evenly-typed TLV records in the extension without prior negotiation." according to spec. So use 7629171!
 
 ### Field 7629169
 Key-value JSON metadata about the sent payment. Holds data about the timestamp when the payment was sent within the episode.
@@ -70,6 +61,17 @@ Rest of keys:
 * `uuid` (str) Unique UID
 * `value_msat`: (int) Number of millisats
 
+### Field 7629171
+[Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
+
+
+### Field 34349337
+See [Whatsat spec](https://github.com/joostjager/whatsat#protocol)
+`signature(sender | recipient | timestamp | msg), DER-encoded ECDSA`
+
+### Field 34349343
+See [Whatsat spec](https://github.com/joostjager/whatsat#protocol)
+Timestamp in nano seconds since unix epoch (big endian encoded)
 
 ## Field 133773310
 Podcast metadata as sent by Sphinx. Concatenation of JSON encoded data and signature of the JSON string. Suggested to use 7629169.
