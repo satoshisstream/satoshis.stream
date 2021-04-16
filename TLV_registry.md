@@ -8,6 +8,7 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 7629168       | tipping       | variable              | Tip note / destination        | Do not use                    |
 | 7629169       | podcast       | variable              | JSON encoded metadata         | See below                     |
 | 7629171       | tipping       | variable              | Tip note / destination        | See below                     |
+| 7629173       | podcast       | variable              | Proposed (WIP) standard       | See below                     |
 | 34349334      | chat          | variable              | Chat message                  | Whatsat and more              |
 | 34349337      | chat          | ~71                   | Signature                     | See below                     |
 | 34349339      | chat          | 33                    | Chat message                  | Whatsat and more              |
@@ -48,7 +49,6 @@ Information about time **recommended**: use any of `time`, `ts`. **ts preferred*
 
 Rest of keys:
 * `action` **recommended**: (str) "boost" or "stream" 
-* `amount` (int) Amount of sats
 * `app_name`: **recommended** (str) Name of sending app
 * `app_version`: (str) Version of sending app 
 * `message` (str) Text message to add to (boost) message
@@ -63,6 +63,73 @@ Rest of keys:
 
 ### Field 7629171
 [Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
+
+### Field 7629173 (PROPOSED)
+WIP standard for streaming value sending. JSON metadata about the sent payment.
+
+```json
+{
+  "version": 1.0,
+  "sender": {
+    "identifier": "GUID",
+    "name": "ListenerX",
+    "key": "XYZ",
+    "sig": "Signature of pipe-delimited concatenation of base64-encoded identifier + sender_key + destinations + payments JSON",
+    "app_name": "Sending application name",
+    "app_version": "1.3.3.7"
+  },
+  "destinations": {
+    "1": {
+      "type": "podcast",
+      "url": "https://example.com/podcast.rss",
+      "guid": "EPGUID1111",
+      "split_name": "Name from value tag"
+    },
+    "2": {
+      "type": "website",
+      "domain": "example.com",
+      "uri": "/page.html"
+    }
+  },
+  "payments": [
+    { "dest": "1", "value_msat": 1337, "ts": 30, "action": "stream" },
+    { "dest": "1", "value_msat": 1337, "ts": 40 },
+    { "dest": "1", "value_msat": 1337, "ts": 50 },
+    { "dest": "1", "value_msat": 1337, "ts": 60 },
+    { "dest": "1", "value_msat": 7777, "ts": 60, "action": "boost", "message": "Great part!" },
+    { "dest": "1", "value_msat": 1337, "ts": 70 },
+    { "dest": "1", "value_msat": 1337, "ts": 80, "speed": "2" },
+    { "dest": "1", "value_msat": 1337, "ts": 90 },
+    { "dest": "2", "value_msat": 8888, "message": "Thanks for the site" }
+  ]
+}
+```
+* `version` is 1 for now, will change for breaking changes, for example different ways of doing signatures.
+* **Sender says something about the person and app sending the payments**
+  * All fields are optional; the whole block does not need to be set. 
+  * It is suggested to allow the user to choose what identifying information to send.
+  * `identifier` is a static value for a sender (listener), up to the application to use a per-feed or podcast-wide identifier. In the future, identifier+signature can be sent as a header, and websites (podcast hosts) can serve different files.
+  * `sig` is the signature of some base64-blocks. `sig( concatenate( base64(identifier), "|", base64(sender_key), "|", base64(destinations), "|", base64(payments_json), "|" ) )
+  * If signature is set, key must be set
+  * `key` is the sending node public key
+* **Destinations are value destination identifiers.** Type can be "podcast" or any other type of payment people want to send. Make a PR to this TLV registry to add your own. Developers are free to add their own key/value pairs.
+  * Type `podcast`
+    * `url` is the URL of the podcast feed. Setting 7629169-like podcast identifiers is also allowed.
+    * `guid` is the GUID of the episode
+    * `split_name` is the split from the value block (podcaster name et cetera)
+  * Type `website`
+    * `domain` must be set
+    * `uri` is a page identifier
+* **Payments are the payments**
+  * `dest`. If no `dest` key is given, the first destination is used.
+  * `value_msat` must add up to the total of the payment. Processing of payment record MUST stop when the total (processed) value_msat exceeds payment amount.
+  * Developers are free to add their own keys.
+  * Key registry:
+    * `message` is a message for this payment
+    * Podcast related:
+      * `action` is stream or boost. Assumed to be stream if not set.
+      * `ts` is the number of seconds in the ep when this was sent
+      * `speed` is the speed that was used when this payment was sent (decimal). Assumed to be 1 if not set.
 
 
 ### Field 34349337
