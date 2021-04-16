@@ -12,7 +12,9 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 34349337      | chat          | ~71                   | Signature                     | See below                     |
 | 34349339      | chat          | 33                    | Chat message                  | Whatsat and more              |
 | 34349343      | chat          | 8                     | Timestamp                     | See below                     |
+| 133773310     | podcast       | variable              | JSON encoded data             | See below                     |
 | 5482373484    | keysend       | 32                    | Preimage as 32 bytes          |                               |
+  
 
 
 
@@ -68,3 +70,17 @@ Rest of keys:
 * `uuid` (str) Unique UID
 * `value_msat`: (int) Number of millisats
 
+
+## Field 133773310
+Podcast metadata as sent by Sphinx. Concatenation of JSON encoded data and signature of the JSON string. Suggested to use 7629169.
+* feedID: number  
+* itemID: number  
+* ts: number  
+* speed?: string, 
+* title?: string  
+* text?: string  
+* url?: string 
+* pubkey?: string  
+* type?: string  
+* uuid?: string  
+* amount?: number 
