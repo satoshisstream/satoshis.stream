@@ -61,7 +61,7 @@ Rest of keys:
 * `speed` (str) Speed
 * `uuid` (str) Unique UID
 * `value_msat`: (int) Number of millisats for this split payment
-* `value_msat_total`: (int) TOTAL Number of millisats for the payment (all splits together)
+* `value_msat_total`: (int) TOTAL Number of millisats for the payment (all splits together, before fees. The actual number someone entered in their player, for numerology purposes.)
 
 ### Field 7629171
 [Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
