@@ -55,8 +55,9 @@ Rest of keys:
 * `message` (str) Text message to add to (boost) message
 * `name` **recommended** (str) Name for this split in value tag
 * `pubkey` (str) Sending node pubkey
-* `sender_key` (str) Node key
+* `sender_key` (str) Node key of sending 
 * `sender_name` (str) Name of sender (free text, not checked by signatures)
+* `sender_id` (str) Static random identifier for users, not displayed by apps, for abuse purposes. Apps can set this per-feed or app-wide. A GUID-like random identifier or a hash works well. Max 32 ascii characters.
 * `sig_fields` (str) pipe separated list of fields that are used for signature (example: feedID|itemID|ts|action|sender_key|message)
 * `signature` (str) DER-encoded ECDSA signature
 * `speed` (str) Speed
