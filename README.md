@@ -10,6 +10,7 @@ Features:
 * ✅ Receive streaming payments
 * ✅ `/claim` your feed in the bot
 * ✅ See `/recent` transactions
+* ✅ Post donation messages live to Telegram or Discord channels (`/messagesub` for Telegram, `/discord` for Discord)
 * ✅ Get `/balance` and `/withdraw` funds
 * ✅ Debug feed problems by doing `/checkfeed RSSURL`
 * ✅ Get daily updates by default (can be disabled)
