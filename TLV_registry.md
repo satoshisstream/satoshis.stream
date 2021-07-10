@@ -60,7 +60,8 @@ Rest of keys:
 * `signature` (str) DER-encoded ECDSA signature
 * `speed` (str) Speed
 * `uuid` (str) Unique UID
-* `value_msat`: (int) Number of millisats
+* `value_msat`: (int) Number of millisats for this split payment
+* `value_msat_total`: (int) TOTAL Number of millisats for the payment (all splits together)
 
 ### Field 7629171
 [Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
