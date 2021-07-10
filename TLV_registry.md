@@ -56,6 +56,7 @@ Rest of keys:
 * `name` **recommended** (str) Name for this split in value tag
 * `pubkey` (str) Sending node pubkey
 * `sender_key` (str) Node key
+* `sender_name` (str) Name of sender (free text, not checked by signatures)
 * `sig_fields` (str) pipe separated list of fields that are used for signature (example: feedID|itemID|ts|action|sender_key|message)
 * `signature` (str) DER-encoded ECDSA signature
 * `speed` (str) Speed
