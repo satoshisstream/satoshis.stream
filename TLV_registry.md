@@ -9,7 +9,7 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 7629169       | podcast       | variable              | JSON encoded metadata         | See below                     |
 | 7629171       | tipping       | variable              | Tip note / destination        | See below                     |
 | 7629173       | podcast       | variable              | Proposed (WIP) standard       | See below                     |
-| 7629175       | podcast       | 64                    | PodcastIndex ID               |                               |
+| 7629175       | podcast       | 64                    | PodcastIndex ID or GUID       |                               |
 | 34349334      | chat          | variable              | Chat message                  | Whatsat and more              |
 | 34349337      | chat          | ~71                   | Signature                     | See below                     |
 | 34349339      | chat          | 33                    | Chat message                  | Whatsat and more              |
@@ -136,7 +136,7 @@ WIP standard for streaming value sending. JSON metadata about the sent payment.
       * `speed` is the speed that was used when this payment was sent (decimal). Assumed to be 1 if not set.
 
 ### Field 7629175
-Set to the podcastindex (podcast) ID for processing
+Set to the podcastindex (podcast) ID or GUID for processing
 
 ### Field 34349337
 See [Whatsat spec](https://github.com/joostjager/whatsat#protocol)
