@@ -52,6 +52,7 @@ Rest of keys:
 * `action` **recommended**: (str) "boost" or "stream" 
 * `app_name`: **recommended** (str) Name of sending app
 * `app_version`: (str) Version of sending app 
+* `boost_link`: (str) App specific URL containing route to podcast, episode, and timestamp at time of boost.
 * `message` (str) Text message to add to (boost) message
 * `name` **recommended** (str) Name for this split in value tag
 * `pubkey` (str) Sending node pubkey
