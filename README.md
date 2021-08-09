@@ -27,6 +27,7 @@ Use an app which supports streaming sats to your favorite podcasters.
 * Desktop/Browser: [podStation](https://podstation.github.io/) browser extension 
 * Mobile + Desktop: [PodFriend](https://web.podfriend.com/) as app and on web
 * Mobile + Desktop: [CurioCaster](https://curiocaster.com/) as a progressive web app
+* Mobile: [Fountain](https://www.fountain.fm/) is an excellent podcast app on iOS and Android
 
 # 🎙 For podcast creators
 Two ways of getting sats from your listeners. Join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) if you need   help!
