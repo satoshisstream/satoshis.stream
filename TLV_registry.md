@@ -55,6 +55,7 @@ Rest of keys:
 * `boost_link`: (str) App specific URL containing route to podcast, episode, and timestamp at time of boost.
 * `message` (str) Text message to add to (boost) message
 * `name` **recommended** (str) Name for this split in value tag
+* `hive_accname`: (str) Hive Account Name (this is linked to a [tag proposal on Podcast Index](https://github.com/Podcastindex-org/podcast-namespace/pull/283))
 * `pubkey` (str) Sending node pubkey
 * `sender_key` (str) Node key of sending 
 * `sender_name` (str) Name of sender (free text, not checked by signatures)
