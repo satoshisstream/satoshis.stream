@@ -39,6 +39,9 @@ Identifying the podcast **required**: use any of `podcast`, `feedID` or `url`. *
 * `feedID` (int) ID of podcast in PodcastIndex.org
 * `url` (int) RSS feed URL of podcast
 
+Optional but **recommended**
+* `guid` (str) [The `<podcast:guid>` tag](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#guid).
+
 Identifying the episode **recommended**: use any of `episode`, `itemID` or `episode_guid`. **itemID preferred**
 * `episode` (str) Episode of the podcas
 * `itemID` (int) ID of episode in PodcastIndex.org
