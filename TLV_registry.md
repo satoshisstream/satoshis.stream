@@ -34,10 +34,11 @@ Example: `{'podcast': 'PODCASTNAME', 'feedID': 1337, 'episode': 'EPISODENAME', '
 
 _It is allowed to send a batch of payments, by sending a **list** of above key-value "blocks" . If you do, consider setting value_msat per block._
 
-Identifying the podcast **required**: use any of `podcast`, `feedID` or `url`. **feedID preferred**
+Identifying the podcast **required**: use any of `podcast`, `feedID` or `url`. **guid preferred**
 * `podcast` (str) Title of the podcast
 * `feedID` (int) ID of podcast in PodcastIndex.org
 * `url` (int) RSS feed URL of podcast
+* `guid` (str) [The `<podcast:guid>` tag](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#guid).
 
 Identifying the episode **recommended**: use any of `episode`, `itemID` or `episode_guid`. **itemID preferred**
 * `episode` (str) Episode of the podcas
