@@ -15,7 +15,7 @@ Features:
 * ✅ Debug feed problems by doing `/checkfeed RSSURL`
 * ✅ Get daily updates by default (can be disabled)
 * ✅ Get a complete export of data by `/export`ing your payments. You will get an excel file with all payments, withdrawals and more.  
-* ✅ **Advanced users:** Enable `/authwithdraw` and auto-send earnings >100 sat to your own node. Why not use your own node? To use the nice statistics (upcoming), for easier switching of destinations, if you don't want to publish your own node key!
+* ✅ **Advanced users:** Enable `/autowithdraw` and auto-send earnings >100 sat to your own node. Why not use your own node? To use the nice statistics (upcoming), for easier switching of destinations, if you don't want to publish your own node key!
 
 ![Image showing withdrawals in a scatter plot](https://raw.githubusercontent.com/satoshisstream/satoshis.stream/main/ext/Export.jpg "Export example")
 
