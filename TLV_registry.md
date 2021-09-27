@@ -12,6 +12,9 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 7629175       | podcast       | 64                    | PodcastIndex ID or GUID       |                               |
 | 34349334      | chat          | variable              | Chat message                  | Whatsat and more              |
 | 34349337      | chat          | ~71                   | Signature                     | See below                     |
+| 34349340      | chat          | variable              | Thunder Hub Sending Node Name |                               |
+| 34349345      | chat          | variable              | Thunder Hub Content type      | typically "text"              |
+| 34349347      | chat          | variable              | Thunder Hub Request type      | typically "text"              |
 | 34349339      | chat          | 33                    | Chat message                  | Whatsat and more              |
 | 34349343      | chat          | 8                     | Timestamp                     | See below                     |
 | 133773310     | podcast       | variable              | JSON encoded data             | See below                     |
