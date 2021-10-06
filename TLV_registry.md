@@ -5,6 +5,7 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | Key        	| Subject 	| Length (bytes) 	| Description                	| Additional information 	|
 |------------	|---------	|----------------	|----------------------------	|------------------------	|
 | 696969        | lnpay         | variable              | LNPay wallet destination      |                               |
+| 818818        | hive          | variable              | Hive account name             | See below                     |
 | 7629168       | tipping       | variable              | Tip note / destination        | Do not use                    |
 | 7629169       | podcast       | variable              | JSON encoded metadata         | See below                     |
 | 7629171       | tipping       | variable              | Tip note / destination        | See below                     |
@@ -164,3 +165,15 @@ Podcast metadata as sent by Sphinx. Concatenation of JSON encoded data and signa
 * type?: string  
 * uuid?: string  
 * amount?: number 
+
+## Field 818818
+Field used by 3speak and other services redirecting Lightning payments to the Hive blockchain via the v4v.app service.
+This field is a str containing the Hive Account Name of the recipient, to be used in a customKey, customValue pair.
+
+For example this value block will redirect to the `brianoflondon` Hive account:
+```
+<podcast:valueRecipient name="Brian of London" address="0396693dee59afd67f178af392990d907d3a9679fa7ce00e806b8e373ff6b70bd8"
+  type="node" split="99" customKey="818818" customValue="brianoflondon">
+</podcast:valueRecipient>
+```
+
