@@ -20,7 +20,7 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 34349347      | chat          | variable              | Thunder Hub Request type      | typically "text"              |
 | 133773310     | podcast       | variable              | JSON encoded data             | See below                     |
 | 5482373484    | keysend       | 32                    | Preimage as 32 bytes          |                               |
-  
+
 
 
 
@@ -54,14 +54,14 @@ Information about time **recommended**: use any of `time`, `ts`. **ts preferred*
 * `ts` (int) Timestamp when the boost/stream was sent WITHIN the episode (playback position)
 
 Rest of keys:
-* `action` **recommended**: (str) "boost" or "stream" 
+* `action` **recommended**: (str) "boost" or "stream"
 * `app_name`: **recommended** (str) Name of sending app
-* `app_version`: (str) Version of sending app 
+* `app_version`: (str) Version of sending app
 * `boost_link`: (str) App specific URL containing route to podcast, episode, and timestamp at time of boost.
 * `message` (str) Text message to add to (boost) message
 * `name` **recommended** (str) Name for this split in value tag
 * `pubkey` (str) Sending node pubkey
-* `sender_key` (str) Node key of sending 
+* `sender_key` (str) Node key of sending
 * `sender_name` (str) Name of sender (free text, not checked by signatures)
 * `sender_id` (str) Static random identifier for users, not displayed by apps, for abuse purposes. Apps can set this per-feed or app-wide. A GUID-like random identifier or a hash works well. Max 32 ascii characters.
 * `sig_fields` (str) pipe separated list of fields that are used for signature (example: feedID|itemID|ts|action|sender_key|message)
@@ -116,7 +116,7 @@ WIP standard for streaming value sending. JSON metadata about the sent payment.
 ```
 * `version` is 1 for now, will change for breaking changes, for example different ways of doing signatures.
 * **Sender says something about the person and app sending the payments**
-  * All fields are optional; the whole block does not need to be set. 
+  * All fields are optional; the whole block does not need to be set.
   * It is suggested to allow the user to choose what identifying information to send.
   * `identifier` is a static value for a sender (listener), up to the application to use a per-feed or podcast-wide identifier. In the future, identifier+signature can be sent as a header, and websites (podcast hosts) can serve different files.
   * `sig` is the signature of some base64-blocks. `sig( concatenate( base64(identifier), "|", base64(sender_key), "|", base64(destinations), "|", base64(payments_json), "|" ) )
@@ -154,26 +154,26 @@ Timestamp in nano seconds since unix epoch (big endian encoded)
 
 ## Field 133773310
 Podcast metadata as sent by Sphinx. Concatenation of JSON encoded data and signature of the JSON string. Suggested to use 7629169.
-* feedID: number  
-* itemID: number  
-* ts: number  
-* speed?: string, 
-* title?: string  
-* text?: string  
-* url?: string 
-* pubkey?: string  
-* type?: string  
-* uuid?: string  
-* amount?: number 
+* feedID: number
+* itemID: number
+* ts: number
+* speed?: string,
+* title?: string
+* text?: string
+* url?: string
+* pubkey?: string
+* type?: string
+* uuid?: string
+* amount?: number
 
 ## Field 818818
 Field used by 3speak and other services redirecting Lightning payments to the Hive blockchain via the v4v.app service.
 This field is a str containing the Hive Account Name of the recipient, to be used in a customKey, customValue pair.
 
 For example this value block will redirect to the `brianoflondon` Hive account:
-```
-<podcast:valueRecipient name="Brian of London" address="0396693dee59afd67f178af392990d907d3a9679fa7ce00e806b8e373ff6b70bd8"
+```xml
+<podcast:valueRecipient name="Brian of London"
+  address="0396693dee59afd67f178af392990d907d3a9679fa7ce00e806b8e373ff6b70bd8"
   type="node" split="99" customKey="818818" customValue="brianoflondon">
 </podcast:valueRecipient>
 ```
-
