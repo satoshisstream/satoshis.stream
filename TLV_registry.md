@@ -166,7 +166,33 @@ Podcast metadata as sent by Sphinx. Concatenation of JSON encoded data and signa
 * uuid?: string
 * amount?: number
 
-## Field 818818
+
+
+# Fields used in customKey / customValue Pairs
+## Field 696969 - LNPay
+This field allows a payment to be sent to a wallet on the LNPay Site. When used in conjunction with a keyValue given
+on that site, LNPay users can receive Keysend Value 4 Value streaming payments.
+
+For any [Wallet on LNPay](https://lnpay.co/) navigate to the [LNPay Dashboard](https://lnpay.co/dashboard/home), find
+a wallet and select **details**. In the **Keysend** section there is a box:
+
+```
+To KEYSEND to via LND to THIS WALLET run the command below:
+
+lncli sendpayment -d 033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500 -a [NUM_SATOSHIS] --keysend --data 696969=77616c5f6872444873305242454d353736
+```
+
+The Value block for this wallet should be:
+
+```xml
+<podcast:valueRecipient name="Your Name Here"
+  address="033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500"
+  type="node" split="99" customKey="696969" customValue="77616c5f6872444873305242454d353736">
+</podcast:valueRecipient>
+```
+
+## Field 818818 - Hive
+
 Field used by 3speak and other services redirecting Lightning payments to the Hive blockchain via the v4v.app service.
 This field is a str containing the Hive Account Name of the recipient, to be used in a customKey, customValue pair.
 
