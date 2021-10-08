@@ -4,8 +4,6 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 
 | Key        	| Subject 	| Length (bytes) 	| Description                	| Additional information 	|
 |------------	|---------	|----------------	|----------------------------	|------------------------	|
-| 696969        | lnpay         | variable              | LNPay wallet destination      |                               |
-| 818818        | hive          | variable              | Hive account name             | See below                     |
 | 7629168       | tipping       | variable              | Tip note / destination        | Do not use                    |
 | 7629169       | podcast       | variable              | JSON encoded metadata         | See below                     |
 | 7629171       | tipping       | variable              | Tip note / destination        | See below                     |
@@ -20,10 +18,9 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 34349347      | chat          | variable              | Thunder Hub Request type      | typically "text"              |
 | 133773310     | podcast       | variable              | JSON encoded data             | See below                     |
 | 5482373484    | keysend       | 32                    | Preimage as 32 bytes          |                               |
-
-
-
-
+| 696969        | lnpay         | variable              | LNPay wallet destination      | See below                     |
+| 818818        | hive          | variable              | Hive account name             | See below                     |
+| 112111100     | lnpay         | variable              | LNPay Wallet ID               | See below                     |
 
 # Additional information
 
@@ -188,6 +185,21 @@ The Value block for this wallet should be:
 <podcast:valueRecipient name="Your Name Here"
   address="033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500"
   type="node" split="99" customKey="696969" customValue="77616c5f6872444873305242454d353736">
+</podcast:valueRecipient>
+```
+
+## Field 112111100 - LNPay
+
+Alternative to `696969` but using the field `Wallet ID` from the `Wallet Access Keys`.
+
+Wallet ID's are text fields looking like `wal_hrDHs0RBEM576`
+
+The Value block for this wallet should be:
+
+```xml
+<podcast:valueRecipient name="Your Name Here"
+  address="033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500"
+  type="node" split="99" customKey="112111100" customValue="wal_hrDHs0RBEM576">
 </podcast:valueRecipient>
 ```
 
