@@ -4,8 +4,6 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 
 | Key        	| Subject 	| Length (bytes) 	| Description                	| Additional information 	|
 |------------	|---------	|----------------	|----------------------------	|------------------------	|
-| 696969        | lnpay         | variable              | LNPay wallet destination      | See below                     |
-| 818818        | hive          | variable              | Hive account name             | See below                     |
 | 7629168       | tipping       | variable              | Tip note / destination        | Do not use                    |
 | 7629169       | podcast       | variable              | JSON encoded metadata         | See below                     |
 | 7629171       | tipping       | variable              | Tip note / destination        | See below                     |
@@ -20,11 +18,9 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 34349347      | chat          | variable              | Thunder Hub Request type      | typically "text"              |
 | 133773310     | podcast       | variable              | JSON encoded data             | See below                     |
 | 5482373484    | keysend       | 32                    | Preimage as 32 bytes          |                               |
+| 696969        | lnpay         | variable              | LNPay wallet destination      | See below                     |
+| 818818        | hive          | variable              | Hive account name             | See below                     |
 | 112111100     | lnpay         | variable              | LNPay Wallet ID               | See below                     |
-
-
-
-
 
 # Additional information
 
