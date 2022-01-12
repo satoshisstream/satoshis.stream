@@ -64,7 +64,7 @@ Rest of keys:
 * `sig_fields` (str) pipe separated list of fields that are used for signature (example: feedID|itemID|ts|action|sender_key|message)
 * `signature` (str) DER-encoded ECDSA signature
 * `speed` (str) Speed
-* `uuid` (str) Unique UID
+* `uuid` (str) Unique UUID
 * `value_msat`: (int) Number of millisats for this split payment
 * `value_msat_total`: (int) TOTAL Number of millisats for the payment (all splits together, before fees. The actual number someone entered in their player, for numerology purposes.)
 
