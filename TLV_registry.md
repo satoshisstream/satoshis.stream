@@ -5,7 +5,7 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | Key        	| Subject 	| Length (bytes) 	| Description                	| Additional information 	|
 |------------	|---------	|----------------	|----------------------------	|------------------------	|
 | 7629168       | tipping       | variable              | Tip note / destination        | Do not use                    |
-| 7629169       | podcast       | variable              | JSON encoded metadata         | See below                     |
+| 7629169       | podcast       | variable              | JSON encoded metadata         | [blip-0010](https://github.com/lightning/blips/blob/master/blip-0010.md)                     |
 | 7629171       | tipping       | variable              | Tip note / destination        | See below                     |
 | 7629173       | podcast       | variable              | Proposed (WIP) standard       | See below                     |
 | 7629175       | podcast       | 64                    | PodcastIndex ID or GUID       |                               |
@@ -27,46 +27,6 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 ### Field 7629168 [PROBLEMATIC! Use 7629171]
 [Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
 Problem is: "a Sending node MUST NOT send evenly-typed TLV records in the extension without prior negotiation." according to spec. So use 7629171!
-
-### Field 7629169
-Key-value JSON metadata about the sent payment. Holds data about the timestamp when the payment was sent within the episode.
-
-Example: `{'podcast': 'PODCASTNAME', 'feedID': 1337, 'episode': 'EPISODENAME', 'action': 'boost', 'ts': 33 }`
-
-_It is allowed to send a batch of payments, by sending a **list** of above key-value "blocks" . If you do, consider setting value_msat per block._
-
-Identifying the podcast **required**: use any of `podcast`, `feedID` or `url`. **guid preferred**
-* `podcast` (str) Title of the podcast
-* `feedID` (int) ID of podcast in PodcastIndex.org
-* `url` (str) RSS feed URL of podcast
-* `guid` (str) [The `<podcast:guid>` tag](https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md#guid).
-
-Identifying the episode **recommended**: use any of `episode`, `itemID` or `episode_guid`. **itemID preferred**
-* `episode` (str) Episode of the podcast
-* `itemID` (int) ID of episode in PodcastIndex.org
-* `episode_guid` (str) The GUID of the episode
-
-Information about time **recommended**: use any of `time`, `ts`. **ts preferred**
-* `time` (str) HH:MM:SS timestamp when the boost/stream was sent WITHIN the episode (playback position)
-* `ts` (int) Timestamp when the boost/stream was sent WITHIN the episode (playback position)
-
-Rest of keys:
-* `action` **recommended**: (str) "boost" or "stream"
-* `app_name`: **recommended** (str) Name of sending app
-* `app_version`: (str) Version of sending app
-* `boost_link`: (str) App specific URL containing route to podcast, episode, and timestamp at time of boost.
-* `message` (str) Text message to add to (boost) message
-* `name` **recommended** (str) Name for this split in value tag
-* `pubkey` (str) Sending node pubkey
-* `sender_key` (str) Node key of sending
-* `sender_name` (str) Name of sender (free text, not checked by signatures)
-* `sender_id` (str) Static random identifier for users, not displayed by apps, for abuse purposes. Apps can set this per-feed or app-wide. A GUID-like random identifier or a hash works well. Max 32 ascii characters.
-* `sig_fields` (str) pipe separated list of fields that are used for signature (example: feedID|itemID|ts|action|sender_key|message)
-* `signature` (str) DER-encoded ECDSA signature
-* `speed` (str) Speed
-* `uuid` (str) Unique UUID
-* `value_msat`: (int) Number of millisats for this split payment
-* `value_msat_total`: (int) TOTAL Number of millisats for the payment (all splits together, before fees. The actual number someone entered in their player, for numerology purposes.)
 
 ### Field 7629171
 [Tip note](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
