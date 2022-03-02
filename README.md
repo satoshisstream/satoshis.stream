@@ -4,7 +4,7 @@ You do not need to run your own node, that is all taken care of ("Uncle Jan node
 
 **[Podcaster? Start now!](#-for-podcast-creators)**
 
-[Looking for Personal wallets?](./personalwallet.md)
+[Looking for Personal wallets?](./personalwallet.md). These are useful if you are a guest for example. 
 
 _You can always join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) for help!_
 
@@ -14,7 +14,7 @@ Features:
 * ✅ Receive streaming payments
 * ✅ `/claim` your feed in the bot
 * ✅ See `/recent` transactions
-* ✅ Post donation messages live to Telegram or Discord channels (`/messagesub` for Telegram, `/discord` for Discord)
+* ✅ Post donation messages live to Telegram or Discord channels (`/messagesub` for Telegram, `/discord` for Discord). This is also useful if you and some friends run a podcast and all want to see the boostagrams.
 * ✅ Get `/balance` and `/withdraw` funds
 * ✅ Debug feed problems by doing `/checkfeed RSSURL`
 * ✅ Get daily updates by default (can be disabled)
