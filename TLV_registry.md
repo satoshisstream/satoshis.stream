@@ -6,21 +6,21 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 |------------	|---------	|----------------	|----------------------------	|------------------------	|
 | 7629168       | tipping       | variable              | Tip note / destination        | Do not use                    |
 | 7629169       | podcast       | variable              | JSON encoded metadata         | [blip-0010](https://github.com/lightning/blips/blob/master/blip-0010.md)                     |
-| 7629171       | tipping       | variable              | Tip note / destination        | See below                     |
-| 7629173       | podcast       | variable              | Proposed (WIP) standard       | See below                     |
+| 7629171       | tipping       | variable              | Tip note / destination        | [See below](#field-7629171)                     |
+| 7629173       | podcast       | variable              | Proposed (WIP) standard       | [See below](#field-7629173-proposed)                     |
 | 7629175       | podcast       | 64                    | PodcastIndex ID or GUID       |                               |
 | 34349334      | chat          | variable              | Chat message                  | Whatsat and more              |
-| 34349337      | chat          | ~71                   | Signature                     | See below                     |
+| 34349337      | chat          | ~71                   | Signature                     | [See below](#field-34349337)                     |
 | 34349339      | chat          | 33                    | Chat message                  | Whatsat and more              |
 | 34349340      | chat          | variable              | Thunder Hub Sending Node Name |                               |
-| 34349343      | chat          | 8                     | Timestamp                     | See below                     |
+| 34349343      | chat          | 8                     | Timestamp                     | [See below](#field-34349343)                     |
 | 34349345      | chat          | variable              | Thunder Hub Content type      | typically "text"              |
 | 34349347      | chat          | variable              | Thunder Hub Request type      | typically "text"              |
-| 133773310     | podcast       | variable              | JSON encoded data             | See below                     |
+| 133773310     | podcast       | variable              | JSON encoded data             | [See below](#field-133773310)                     |
 | 5482373484    | keysend       | 32                    | Preimage as 32 bytes          |                               |
-| 696969        | lnpay         | variable              | LNPay wallet destination      | See below                     |
-| 818818        | hive          | variable              | Hive account name             | See below                     |
-| 112111100     | lnpay         | variable              | LNPay Wallet ID               | See below                     |
+| 696969        | lnpay         | variable              | LNPay wallet destination      | [See below](#field-696969---lnpay)                     |
+| 818818        | hive          | variable              | Hive account name             | [See below](#field-818818---hive)                     |
+| 112111100     | lnpay         | variable              | LNPay Wallet ID               | [See below](#field-112111100---lnpay)                     |
 
 # Additional information
 
@@ -148,6 +148,19 @@ The Value block for this wallet should be:
 </podcast:valueRecipient>
 ```
 
+## Field 818818 - Hive
+
+Field used by 3speak and other services redirecting Lightning payments to the Hive blockchain via the v4v.app service.
+This field is a str containing the Hive Account Name of the recipient, to be used in a customKey, customValue pair.
+
+For example this value block will redirect to the `brianoflondon` Hive account:
+```xml
+<podcast:valueRecipient name="Brian of London"
+  address="0396693dee59afd67f178af392990d907d3a9679fa7ce00e806b8e373ff6b70bd8"
+  type="node" split="99" customKey="818818" customValue="brianoflondon">
+</podcast:valueRecipient>
+```
+
 ## Field 112111100 - LNPay
 
 Alternative to `696969` but using the field `Wallet ID` from the `Wallet Access Keys`.
@@ -160,18 +173,5 @@ The Value block for this wallet should be:
 <podcast:valueRecipient name="Your Name Here"
   address="033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500"
   type="node" split="99" customKey="112111100" customValue="wal_hrDHs0RBEM576">
-</podcast:valueRecipient>
-```
-
-## Field 818818 - Hive
-
-Field used by 3speak and other services redirecting Lightning payments to the Hive blockchain via the v4v.app service.
-This field is a str containing the Hive Account Name of the recipient, to be used in a customKey, customValue pair.
-
-For example this value block will redirect to the `brianoflondon` Hive account:
-```xml
-<podcast:valueRecipient name="Brian of London"
-  address="0396693dee59afd67f178af392990d907d3a9679fa7ce00e806b8e373ff6b70bd8"
-  type="node" split="99" customKey="818818" customValue="brianoflondon">
 </podcast:valueRecipient>
 ```
