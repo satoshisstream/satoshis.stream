@@ -37,9 +37,8 @@ Use an app which supports streaming sats to your favorite podcasters.
 Two ways of getting sats from your listeners. Join the [Support group](https://t.me/joinchat/fXmTB7f1e-EyMmRk) if you need   help!
 
 ## ⚡️ Use this service
-1. Find your podcast on [podcastindex.org](https://podcastindex.org/). Click the little lightning bolt to go to podcasterwallet.
-2. Enter your details on [podcasterwallet](https://podcasterwallet.com/). Then add SatoshisStream as custom node:  03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4
-3. Install/open [Telegram](https://t.me/satoshisstreambot), start a conversation with [@SatoshisStreamBot](https://t.me/satoshisstreambot) and follow instructions (/claim your feed)
+1. Claim your podcast on [podcasterwallet](https://podcasterwallet.com/). Then click `Specify your wallet manually.` and SatoshisStream as custom node:  03c457fafbc8b91b462ef0b8f61d4fd96577a4b58c18b50e59621fd0f41a8ae1a4
+2. Install/open [Telegram](https://t.me/satoshisstreambot), start a conversation with [@SatoshisStreamBot](https://t.me/satoshisstreambot) and follow instructions (/claim your feed)
 
 _Withdrawal fee is 3% for the service + 1 % to PodcastIndex for a total of 4%_
 
