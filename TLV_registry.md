@@ -4,6 +4,8 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 
 | Key        	| Subject 	| Length (bytes) 	| Description                	| Additional information 	|
 |------------	|---------	|----------------	|----------------------------	|------------------------	|
+| 696969        | lnpay         | variable              | LNPay wallet destination      | [See below](#field-696969---lnpay)                     |
+| 818818        | hive          | variable              | Hive account name             | [See below](#field-818818---hive)                     |
 | 7629168       | tipping       | variable              | Tip note / destination        | Do not use                    |
 | 7629169       | podcast       | variable              | JSON encoded metadata         | [blip-0010](https://github.com/lightning/blips/blob/master/blip-0010.md)                     |
 | 7629171       | tipping       | variable              | Tip note / destination        | [See below](#field-7629171)                     |
@@ -16,11 +18,9 @@ Senders and apps can send custom TLV fields in Lightning payments. Open a [PR](h
 | 34349343      | chat          | 8                     | Timestamp                     | [See below](#field-34349343)                     |
 | 34349345      | chat          | variable              | Thunder Hub Content type      | typically "text"              |
 | 34349347      | chat          | variable              | Thunder Hub Request type      | typically "text"              |
+| 112111100     | lnpay         | variable              | LNPay Wallet ID               | [See below](#field-112111100---lnpay)                     |
 | 133773310     | podcast       | variable              | JSON encoded data             | [See below](#field-133773310)                     |
 | 5482373484    | keysend       | 32                    | Preimage as 32 bytes          |                               |
-| 696969        | lnpay         | variable              | LNPay wallet destination      | [See below](#field-696969---lnpay)                     |
-| 818818        | hive          | variable              | Hive account name             | [See below](#field-818818---hive)                     |
-| 112111100     | lnpay         | variable              | LNPay Wallet ID               | [See below](#field-112111100---lnpay)                     |
 
 # Additional information
 
